@@ -10,6 +10,7 @@
 		5DF911092BD7A4429FF58BB2 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9372BC226C279B27978B5583 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 		B589776D62B0A3789F9F06A6 /* Pods_ExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0E265CBDA155A5B0FB6841 /* Pods_ExampleApp.framework */; };
 		C0AFE868F9730FB72AA51E36 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C233A92E30C0DB86D1091 /* Pods_ExampleAppTests.framework */; };
+		D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17407DB2C05F3FA0063F2A7 /* Card.swift */; };
 		D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DB2C04AA66000B1520 /* AppDelegate.swift */; };
 		D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */; };
 		D19A11E02C04AA66000B1520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DF2C04AA66000B1520 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		5FB79E872E26AFA5FF041BEE /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		9372BC226C279B27978B5583 /* Pods_ExampleApp_ExampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApp_ExampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75FD045C2DDF3340AF4719E /* Pods-ExampleApp-ExampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D17407DB2C05F3FA0063F2A7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D19A11D82C04AA66000B1520 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A11DB2C04AA66000B1520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,8 +103,14 @@
 				5B0E2D5EB325A76D49B5C32B /* Pods-ExampleAppTests.debug.xcconfig */,
 				46CC772EAB5ECEC2E97544EC /* Pods-ExampleAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D18C44DB2C05DECD00EE7E63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D19A11CF2C04AA66000B1520 = {
@@ -130,6 +138,7 @@
 		D19A11DA2C04AA66000B1520 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D18C44DB2C05DECD00EE7E63 /* Resources */,
 				D19A11DB2C04AA66000B1520 /* AppDelegate.swift */,
 				D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */,
 				D19A11DF2C04AA66000B1520 /* ViewController.swift */,
@@ -137,6 +146,7 @@
 				D19A11E42C04AA69000B1520 /* Assets.xcassets */,
 				D19A11E62C04AA69000B1520 /* LaunchScreen.storyboard */,
 				D19A11E92C04AA69000B1520 /* Info.plist */,
+				D17407DB2C05F3FA0063F2A7 /* Card.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";
@@ -302,7 +312,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2D22AE30E5FFC1DBF0F2A522 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -410,6 +420,7 @@
 				D19A11E02C04AA66000B1520 /* ViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
 				D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */,
+				D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +513,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -565,7 +576,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -644,7 +655,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B0E2D5EB325A76D49B5C32B /* Pods-ExampleAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -664,7 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46CC772EAB5ECEC2E97544EC /* Pods-ExampleAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -684,7 +695,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C75FD045C2DDF3340AF4719E /* Pods-ExampleApp-ExampleAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -702,7 +713,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB2392C798937B312D145AE1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

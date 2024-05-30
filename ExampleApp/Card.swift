@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Card {
+///Representing a single card displayed on the Offers page
+struct Card: Codable {
     
     var id:Int
     var title:String
