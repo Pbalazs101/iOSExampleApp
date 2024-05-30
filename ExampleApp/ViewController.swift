@@ -13,29 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("Test")
-        //loadApiData()
-        
+
+        loadCardInfo()
     }
     
-    
-    
-/*
-    func loadApiData(){
-
-            AF.request("file://Resources/CardData.json").responseDecodable(of: Card.self) { [self] response in
-
-                switch response.result {
-
-                case .success(let productData):
-                    print("OK")
-
-                case .failure(let productFetcherror):
-                    print("Error")
-                }
+    func loadCardInfo() {
+        
+        let url = "http://localhost:8000/CardData.json"
+        AF.request(url).response {
+            response in
+            guard let data = response.data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let actualCard = try decoder.decode(Card.self, from: data)
+            } catch let error {
+                print(error)
             }
         }
-    
-    */
+    }
 }
 
