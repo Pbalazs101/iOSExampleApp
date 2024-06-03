@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var cardsData: [Card] = []
     
+    
     func loadCardInfo() {
         
         let url = "http://localhost:8000/CardData.json"
