@@ -16,7 +16,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cardsTable.dataSource = self
         cardsTable.delegate = self
         
+        
         loadCardInfo()
+        
+        /*
+        cardsTable.setNeedsLayout()
+        cardsTable.layoutIfNeeded()
+         */
     }
     
     @IBOutlet weak var cardsTable: UITableView!
