@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         loadCardInfo()
     }
     
+    @IBOutlet weak var cardsTable: UITableView!
+    
     func loadCardInfo() {
         
         let url = "http://localhost:8000/CardData.json"
