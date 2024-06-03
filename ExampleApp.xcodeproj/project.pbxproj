@@ -11,6 +11,7 @@
 		B589776D62B0A3789F9F06A6 /* Pods_ExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0E265CBDA155A5B0FB6841 /* Pods_ExampleApp.framework */; };
 		C0AFE868F9730FB72AA51E36 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C233A92E30C0DB86D1091 /* Pods_ExampleAppTests.framework */; };
 		D161D5D82C0DE29100214B04 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */; };
+		D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */; };
 		D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17407DB2C05F3FA0063F2A7 /* Card.swift */; };
 		D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DB2C04AA66000B1520 /* AppDelegate.swift */; };
 		D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		9372BC226C279B27978B5583 /* Pods_ExampleApp_ExampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApp_ExampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75FD045C2DDF3340AF4719E /* Pods-ExampleApp-ExampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		D17407DB2C05F3FA0063F2A7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D19A11D82C04AA66000B1520 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A11DB2C04AA66000B1520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				D19A11E92C04AA69000B1520 /* Info.plist */,
 				D17407DB2C05F3FA0063F2A7 /* Card.swift */,
 				D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */,
+				D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */,
 				D161D5D82C0DE29100214B04 /* CardTableViewCell.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* ViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
