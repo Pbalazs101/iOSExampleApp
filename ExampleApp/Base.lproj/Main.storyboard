@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="80" width="393" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9jC-t8-DaQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9jC-t8-DaQ" customClass="CardTableViewCell" customModule="ExampleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="116.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9jC-t8-DaQ" id="gak-RX-S2Q">
@@ -104,6 +104,11 @@
                                                 <constraint firstItem="RiP-Gb-eHh" firstAttribute="top" secondItem="gak-RX-S2Q" secondAttribute="top" id="u4d-Iu-Zzs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="arrowImage" destination="59B-kC-NQP" id="dmA-XU-tMc"/>
+                                            <outlet property="descriptionLabel" destination="J4L-6V-hXO" id="mJx-VO-UxE"/>
+                                            <outlet property="titleLabel" destination="ScH-kT-SpF" id="6GZ-c2-fhG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
