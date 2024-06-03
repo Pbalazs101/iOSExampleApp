@@ -29,13 +29,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="XNO-3E-J9K" firstAttribute="centerY" secondItem="vdi-2q-xRT" secondAttribute="centerY" id="1EA-U7-MRt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="LVh-n9-TZE"/>
                                     <constraint firstAttribute="height" constant="80" id="aZs-dY-eEP"/>
                                     <constraint firstItem="XNO-3E-J9K" firstAttribute="centerX" secondItem="vdi-2q-xRT" secondAttribute="centerX" id="u4k-2F-1p7"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lXB-Dk-ZeT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lXB-Dk-ZeT">
                                 <rect key="frame" x="0.0" y="80" width="393" height="738"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9jC-t8-DaQ" customClass="CardTableViewCell" customModule="ExampleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="116.33333587646484"/>
@@ -116,13 +116,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vdi-2q-xRT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ja4-iw-pjh"/>
-                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jvy-1C-VUo"/>
-                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="top" secondItem="vdi-2q-xRT" secondAttribute="bottom" id="Ngv-AQ-kQc"/>
-                            <constraint firstItem="vdi-2q-xRT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OuD-fD-NKg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lXB-Dk-ZeT" secondAttribute="trailing" id="ScX-Y0-dNB"/>
-                            <constraint firstItem="vdi-2q-xRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U6A-19-aOD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lXB-Dk-ZeT" secondAttribute="bottom" id="zD0-YB-Ggq"/>
+                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="top" secondItem="vdi-2q-xRT" secondAttribute="bottom" id="0A0-Tg-Wd4"/>
+                            <constraint firstItem="vdi-2q-xRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Iy-xE-KfW"/>
+                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcc-gr-q8y"/>
+                            <constraint firstItem="vdi-2q-xRT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gs2-bj-Cpj"/>
+                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Odz-k5-F7c"/>
+                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TgS-k3-tCB"/>
+                            <constraint firstItem="lXB-Dk-ZeT" firstAttribute="top" secondItem="vdi-2q-xRT" secondAttribute="bottom" id="cSM-xw-Aym"/>
+                            <constraint firstItem="vdi-2q-xRT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="coG-aX-oa4"/>
                         </constraints>
                     </view>
                     <connections>

@@ -8,12 +8,14 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
+        cardsTable.dataSource = self
+        cardsTable.delegate = self
+        
         loadCardInfo()
     }
     
@@ -38,5 +40,22 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cardsData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+
+        let currentCard = cardsData[indexPath.row]
+        let customCell = cardsTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardTableViewCell
+        
+        customCell.titleLabel.text = currentCard.title
+        customCell.descriptionLabel.text = currentCard.description
+        
+        return customCell
+    }
+    
 }
 
