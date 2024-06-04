@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lAj-7x-yX1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -173,22 +173,59 @@
                                     <constraint firstAttribute="trailing" secondItem="urG-sM-dPS" secondAttribute="trailing" id="wwH-qU-Nka"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nrM-on-nAC">
-                                <rect key="frame" x="0.0" y="171" width="393" height="647"/>
-                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-NU-efF">
+                                <rect key="frame" x="0.0" y="147" width="393" height="671"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nrM-on-nAC">
+                                        <rect key="frame" x="16" y="26" width="361" height="99.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-BC-Goh">
+                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDy-p4-w2H">
+                                                <rect key="frame" x="0.0" y="44.666666666666657" width="40.666666666666664" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-kr-6sm">
+                                                <rect key="frame" x="0.0" y="80" width="39.666666666666664" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="190" id="Kc0-E8-kdr"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sSa-XM-3Zg" firstAttribute="trailing" secondItem="nrM-on-nAC" secondAttribute="trailing" constant="16" id="ggm-fx-mxF"/>
+                                    <constraint firstItem="nrM-on-nAC" firstAttribute="leading" secondItem="sSa-XM-3Zg" secondAttribute="leading" constant="16" id="vvV-gF-ppe"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="czO-iE-23F"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sSa-XM-3Zg"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sun-FY-bn0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nrM-on-nAC" firstAttribute="bottom" secondItem="sun-FY-bn0" secondAttribute="bottom" id="2MN-zK-RRQ"/>
                             <constraint firstItem="sun-FY-bn0" firstAttribute="trailing" secondItem="k0A-9m-0Wx" secondAttribute="trailing" id="BQt-tj-nVE"/>
-                            <constraint firstItem="nrM-on-nAC" firstAttribute="top" secondItem="k0A-9m-0Wx" secondAttribute="bottom" constant="32" id="Dl3-YQ-Ce4"/>
                             <constraint firstItem="k0A-9m-0Wx" firstAttribute="leading" secondItem="sun-FY-bn0" secondAttribute="leading" id="EAb-cw-Clz"/>
                             <constraint firstItem="k0A-9m-0Wx" firstAttribute="top" secondItem="sun-FY-bn0" secondAttribute="top" id="EFR-LT-Bi0"/>
-                            <constraint firstItem="nrM-on-nAC" firstAttribute="leading" secondItem="sun-FY-bn0" secondAttribute="leading" id="e9y-Ta-Azg"/>
-                            <constraint firstItem="sun-FY-bn0" firstAttribute="trailing" secondItem="nrM-on-nAC" secondAttribute="trailing" id="qIT-5B-6Cj"/>
+                            <constraint firstItem="yoG-NU-efF" firstAttribute="top" secondItem="k0A-9m-0Wx" secondAttribute="bottom" constant="8" symbolic="YES" id="ULu-gT-6pD"/>
+                            <constraint firstItem="yoG-NU-efF" firstAttribute="trailing" secondItem="k0A-9m-0Wx" secondAttribute="trailing" id="ZS3-W4-cJJ"/>
+                            <constraint firstItem="yoG-NU-efF" firstAttribute="bottom" secondItem="sun-FY-bn0" secondAttribute="bottom" id="pw3-oW-lHL"/>
+                            <constraint firstItem="yoG-NU-efF" firstAttribute="leading" secondItem="k0A-9m-0Wx" secondAttribute="leading" id="szP-DU-JTj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailsScrollView" destination="yoG-NU-efF" id="WU2-Sk-v31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCb-6V-8uK" sceneMemberID="firstResponder"/>
             </objects>

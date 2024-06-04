@@ -7,14 +7,27 @@
 
 import UIKit
 
-class OfferDetailsViewController: UIViewController {
+class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var detailsScrollView: UIScrollView!
+    
     let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailsScrollView.isScrollEnabled = true
+        detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height+1)
+        
         //view.backgroundColor = backgroundColor
 
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.contentOffset.y = 0
+        }
+    }
+    
+    
 
 }
