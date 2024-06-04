@@ -9,11 +9,12 @@ import UIKit
 
 class OfferDetailsViewController: UIViewController {
 
+    let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = backgroundColor
+        //view.backgroundColor = backgroundColor
+
     }
-    
-    let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
 
 }

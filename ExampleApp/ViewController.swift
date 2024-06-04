@@ -30,8 +30,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var cardsData: [Card] = []
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         print("clicked")
-    }
+
+        }
     
     func loadCardInfo() {
         
