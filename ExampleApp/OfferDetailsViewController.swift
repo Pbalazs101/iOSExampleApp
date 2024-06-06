@@ -9,7 +9,10 @@ import UIKit
 
 class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var detailsScrollView: UIScrollView!
+    @IBOutlet weak var extendedDescriptionLabel: UILabel!
     
     let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     
