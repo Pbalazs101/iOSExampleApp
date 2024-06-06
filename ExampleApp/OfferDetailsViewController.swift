@@ -18,17 +18,37 @@ class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailsScrollView.isScrollEnabled = true
-        detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height+1)
         
-        //view.backgroundColor = backgroundColor
+        setupStyle()
+        configureRefreshControl()
+    }
+    
+    func configureRefreshControl () {
+       // Add the refresh control to your UIScrollView object.
+        detailsScrollView.refreshControl = UIRefreshControl()
+        detailsScrollView.refreshControl?.addTarget(self, action:
+                                          #selector(handleRefreshControl),
+                                          for: .valueChanged)
+    }
+        
+    @objc func handleRefreshControl() {
+       // Update your content…
 
+       // Dismiss the refresh control.
+       DispatchQueue.main.async {
+          self.detailsScrollView.refreshControl?.endRefreshing()
+       }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y < 0 {
             scrollView.contentOffset.y = 0
         }
+    }
+    
+    func setupStyle() {
+        detailsScrollView.isScrollEnabled = true
+        detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height+1)
     }
     
     
