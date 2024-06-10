@@ -54,11 +54,13 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
        }
     }
     
+    /*
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 0 {
+        if scrollView.contentOffset.y > 0 {
             scrollView.contentOffset.y = 0
         }
     }
+     */
     
     func setLabels() {
         titleLabel.text = cardsData[0].title

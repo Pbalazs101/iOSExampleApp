@@ -184,10 +184,11 @@
                                     <constraint firstAttribute="trailing" secondItem="urG-sM-dPS" secondAttribute="trailing" id="wwH-qU-Nka"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-NU-efF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-NU-efF">
                                 <rect key="frame" x="0.0" y="147" width="393" height="671"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nrM-on-nAC">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nrM-on-nAC">
                                         <rect key="frame" x="16" y="26" width="361" height="190"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-BC-Goh">
@@ -215,6 +216,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="nrM-on-nAC" firstAttribute="top" secondItem="sSa-XM-3Zg" secondAttribute="top" constant="26" id="YBz-Y4-4RM"/>
                                     <constraint firstItem="sSa-XM-3Zg" firstAttribute="trailing" secondItem="nrM-on-nAC" secondAttribute="trailing" constant="16" id="ggm-fx-mxF"/>
                                     <constraint firstItem="nrM-on-nAC" firstAttribute="leading" secondItem="sSa-XM-3Zg" secondAttribute="leading" constant="16" id="vvV-gF-ppe"/>
                                 </constraints>
@@ -228,10 +230,6 @@
                             <constraint firstItem="sun-FY-bn0" firstAttribute="trailing" secondItem="k0A-9m-0Wx" secondAttribute="trailing" id="BQt-tj-nVE"/>
                             <constraint firstItem="k0A-9m-0Wx" firstAttribute="leading" secondItem="sun-FY-bn0" secondAttribute="leading" id="EAb-cw-Clz"/>
                             <constraint firstItem="k0A-9m-0Wx" firstAttribute="top" secondItem="sun-FY-bn0" secondAttribute="top" id="EFR-LT-Bi0"/>
-                            <constraint firstItem="yoG-NU-efF" firstAttribute="top" secondItem="k0A-9m-0Wx" secondAttribute="bottom" constant="8" symbolic="YES" id="ULu-gT-6pD"/>
-                            <constraint firstItem="yoG-NU-efF" firstAttribute="trailing" secondItem="k0A-9m-0Wx" secondAttribute="trailing" id="ZS3-W4-cJJ"/>
-                            <constraint firstItem="yoG-NU-efF" firstAttribute="bottom" secondItem="sun-FY-bn0" secondAttribute="bottom" id="pw3-oW-lHL"/>
-                            <constraint firstItem="yoG-NU-efF" firstAttribute="leading" secondItem="k0A-9m-0Wx" secondAttribute="leading" id="szP-DU-JTj"/>
                         </constraints>
                     </view>
                     <connections>
