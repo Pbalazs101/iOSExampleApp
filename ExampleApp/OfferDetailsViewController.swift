@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
+class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -21,6 +21,9 @@ class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         setupStyle()
         configureRefreshControl()
+        loadCardInfo()
+        detailsScrollView.layoutIfNeeded()
+        
     }
     
     func configureRefreshControl () {
@@ -32,8 +35,9 @@ class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
     }
         
     @objc func handleRefreshControl() {
-       // Update your content…
-
+       // Updating content. Here I have to reload the data and call the setLabels function to update the labels.
+        setLabels()
+        
        // Dismiss the refresh control.
        DispatchQueue.main.async {
           self.detailsScrollView.refreshControl?.endRefreshing()
@@ -46,10 +50,16 @@ class OfferDetailsViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func setLabels() {
+        titleLabel.text = cardsData[0].title
+        descriptionLabel.text = cardsData[0].description
+    }
+    
     func setupStyle() {
         detailsScrollView.isScrollEnabled = true
-        detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height+1)
+        detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height)
     }
+    
     
     
 
