@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
 
     override func viewDidLoad() {
@@ -22,10 +22,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var cardsTable: UITableView!
 
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("clicked")
+        
+        let offerDetailsVC = storyBoard.instantiateViewController(identifier: "OfferDetails")
+                self.navigationController?.pushViewController(offerDetailsVC, animated: true)
 
         }
     

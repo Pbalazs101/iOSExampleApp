@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScrollViewDelegate {
+class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -16,13 +16,17 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     
     let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
         setupStyle()
         configureRefreshControl()
         loadCardInfo()
         detailsScrollView.layoutIfNeeded()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
         
     }
     
