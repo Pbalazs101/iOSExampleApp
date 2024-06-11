@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cardsTable.delegate = self
         setupStyle()
         configureRefreshControl()
-        cardsTable.reloadData()
+        //cardsTable.reloadData()
 
     }
     
@@ -30,6 +30,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
 
+    /*
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Test Header"
+    }
+     */
+    
+    
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
+    
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        label.font = UIFont.boldSystemFont(ofSize: 24.0)
+        
+        label.textAlignment = .left
+        label.text = "Special Offers"
+        return label
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
