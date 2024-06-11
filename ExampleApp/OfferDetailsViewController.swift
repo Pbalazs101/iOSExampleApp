@@ -27,8 +27,8 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     override func viewWillAppear(_ animated: Bool) {
         setupStyle()
         configureRefreshControl()
-        loadCardInfo()
         detailsScrollView.layoutIfNeeded()
+        setLabels()
     }
     
     override func viewDidLoad() {
@@ -73,7 +73,6 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
         extendedDescriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
          */
         extendedDescriptionLabel.lineBreakMode = .byWordWrapping
-        extendedDescriptionLabel.numberOfLines = 4
     }
     
     func setupStyle() {

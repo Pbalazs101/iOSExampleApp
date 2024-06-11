@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     override func viewWillAppear(_ animated: Bool) {
-        loadCardInfo()
+        
     }
 
     override func viewDidLoad() {
@@ -21,7 +21,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cardsTable.delegate = self
         setupStyle()
         configureRefreshControl()
-        //cardsTable.reloadData()
+        loadCardInfo()
+        cardsTable.reloadData()
 
     }
     

@@ -12,7 +12,7 @@ var cardsData: [Card] = []
 
 /// Send an API request to obtain card info from JSON
 func loadCardInfo() {
-    
+
     let url = "http://localhost:8000/CardData.json"
     AF.request(url).response {
         response in
