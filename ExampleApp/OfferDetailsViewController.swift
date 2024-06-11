@@ -65,6 +65,15 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     func setLabels() {
         titleLabel.text = cardsData[0].title
         descriptionLabel.text = cardsData[0].description
+        
+        extendedDescriptionLabel.text = cardsData[0].detailedDescription
+        
+        /*
+                extendedDescriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        extendedDescriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+         */
+        extendedDescriptionLabel.lineBreakMode = .byWordWrapping
+        extendedDescriptionLabel.numberOfLines = 4
     }
     
     func setupStyle() {
