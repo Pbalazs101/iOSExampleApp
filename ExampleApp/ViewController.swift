@@ -44,7 +44,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
-        
         label.textAlignment = .left
         label.text = "Special Offers"
         return label

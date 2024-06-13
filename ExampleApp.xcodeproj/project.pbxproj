@@ -22,6 +22,8 @@
 		D19A11F32C04AA69000B1520 /* ExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11F22C04AA69000B1520 /* ExampleAppTests.swift */; };
 		D19A11FD2C04AA69000B1520 /* ExampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11FC2C04AA69000B1520 /* ExampleAppUITests.swift */; };
 		D19A11FF2C04AA69000B1520 /* ExampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11FE2C04AA69000B1520 /* ExampleAppUITestsLaunchTests.swift */; };
+		D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */; };
+		D1C84CBA2C1AEA3400CB275D /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */; };
 		D1DBDA722C11A90B00B6ACC6 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		D19A11F82C04AA69000B1520 /* ExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A11FC2C04AA69000B1520 /* ExampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppUITests.swift; sourceTree = "<group>"; };
 		D19A11FE2C04AA69000B1520 /* ExampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		DB2392C798937B312D145AE1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4C882BB576ABD9C05B34757 /* Pods-ExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		D18C44DB2C05DECD00EE7E63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */,
+				D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			files = (
 				D19A11E52C04AA69000B1520 /* Assets.xcassets in Resources */,
 				D19A11E82C04AA69000B1520 /* Base in Resources */,
+				D1C84CBA2C1AEA3400CB275D /* CustomTableViewCell.xib in Resources */,
 				D19A11E32C04AA66000B1520 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +435,7 @@
 			files = (
 				D1DBDA722C11A90B00B6ACC6 /* RequestHandler.swift in Sources */,
 				D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */,
+				D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */,
 				D161D5D82C0DE29100214B04 /* CardTableViewCell.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* ViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
