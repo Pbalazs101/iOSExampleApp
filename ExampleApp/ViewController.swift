@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
+        
         cardsTable.dataSource = self
         cardsTable.delegate = self
         setupStyle()
@@ -66,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
 
         let currentCard = cardsData[indexPath.row]
-        let customCell = cardsTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardTableViewCell
+        let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         
         customCell.titleLabel.text = currentCard.title
         customCell.descriptionLabel.text = currentCard.description

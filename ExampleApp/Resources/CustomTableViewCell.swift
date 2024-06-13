@@ -8,8 +8,12 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
-    static let identifier = "CustomTableViewCell"
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
+    static let identifier = "customCell"
     
     static func nib() -> UINib {
         return UINib(nibName: "CustomTableViewCell", bundle: nil)
