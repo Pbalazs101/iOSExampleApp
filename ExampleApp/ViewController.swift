@@ -32,26 +32,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var cardsTable: UITableView!
 
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-    
-
-    /*
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Test Header"
-    }
-     */
-    
-    
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
-    
-    
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
         label.textAlignment = .left
         label.text = "Special Offers"
         return label
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -76,20 +64,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return customCell
     }
-    
-    /*
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 0 {
-            scrollView.contentOffset.y = 0
-        }
-    }
-    */
+
     func setupStyle() {
         view.layoutIfNeeded()
     }
     
     func configureRefreshControl () {
-       // Add the refresh control to your UIScrollView object.
         cardsTable.refreshControl = UIRefreshControl()
         cardsTable.refreshControl?.addTarget(self, action:
                                           #selector(handleRefreshControl),
@@ -97,9 +77,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
         
     @objc func handleRefreshControl() {
-       // Updating content. Here I have to reload the data and call the setLabels function to update the labels.
-        //loadCardInfo()
-        print("Test refresh control")
         cardsTable.reloadData()
         
        // Dismiss the refresh control.
