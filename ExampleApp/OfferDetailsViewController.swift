@@ -78,6 +78,7 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     func setupStyle() {
         detailsScrollView.isScrollEnabled = true
         detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height)
+        detailsScrollView.layer.backgroundColor = backgroundColor.cgColor
     }
     
     
