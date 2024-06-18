@@ -29,17 +29,11 @@ func loadCardInfo() {
 }
 
 func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
-    
-   // Build an URL
    let url = URL(string: "http://localhost:8000/CardData.json")!
-    
-   // Perform the network request
    let task = URLSession.shared.dataTask(with: url) { data, response, error in
       if let data = data {
-         // Success, call the completion handler with the data
          completion(true, data)
       } else {
-         // Failure, call the completion handler with nil data
          completion(false, nil)
       }
    }
