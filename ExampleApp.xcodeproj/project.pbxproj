@@ -10,7 +10,6 @@
 		5DF911092BD7A4429FF58BB2 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9372BC226C279B27978B5583 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 		B589776D62B0A3789F9F06A6 /* Pods_ExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0E265CBDA155A5B0FB6841 /* Pods_ExampleApp.framework */; };
 		C0AFE868F9730FB72AA51E36 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C233A92E30C0DB86D1091 /* Pods_ExampleAppTests.framework */; };
-		D161D5D82C0DE29100214B04 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */; };
 		D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */; };
 		D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17407DB2C05F3FA0063F2A7 /* Card.swift */; };
 		D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DB2C04AA66000B1520 /* AppDelegate.swift */; };
@@ -52,7 +51,6 @@
 		5FB79E872E26AFA5FF041BEE /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		9372BC226C279B27978B5583 /* Pods_ExampleApp_ExampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApp_ExampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75FD045C2DDF3340AF4719E /* Pods-ExampleApp-ExampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		D17407DB2C05F3FA0063F2A7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D19A11D82C04AA66000B1520 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +117,6 @@
 		D18C44DB2C05DECD00EE7E63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */,
-				D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -151,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				D18C44DB2C05DECD00EE7E63 /* Resources */,
+				D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */,
+				D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */,
 				D19A11DB2C04AA66000B1520 /* AppDelegate.swift */,
 				D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */,
 				D19A11DF2C04AA66000B1520 /* ViewController.swift */,
@@ -159,7 +157,6 @@
 				D19A11E62C04AA69000B1520 /* LaunchScreen.storyboard */,
 				D19A11E92C04AA69000B1520 /* Info.plist */,
 				D17407DB2C05F3FA0063F2A7 /* Card.swift */,
-				D161D5D72C0DE29100214B04 /* CardTableViewCell.swift */,
 				D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */,
 				D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */,
 			);
@@ -436,7 +433,6 @@
 				D1DBDA722C11A90B00B6ACC6 /* RequestHandler.swift in Sources */,
 				D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */,
 				D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */,
-				D161D5D82C0DE29100214B04 /* CardTableViewCell.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* ViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
 				D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */,

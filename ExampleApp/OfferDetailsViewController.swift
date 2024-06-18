@@ -24,20 +24,17 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     
     let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         setupStyle()
         configureRefreshControl()
         detailsScrollView.layoutIfNeeded()
         setLabels()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
     func configureRefreshControl () {
-       // Add the refresh control to your UIScrollView object.
         detailsScrollView.refreshControl = UIRefreshControl()
         detailsScrollView.refreshControl?.addTarget(self, action:
                                           #selector(handleRefreshControl),
@@ -45,33 +42,16 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
     }
         
     @objc func handleRefreshControl() {
-       // Updating content. Here I have to reload the data and call the setLabels function to update the labels.
         setLabels()
-        
-       // Dismiss the refresh control.
        DispatchQueue.main.async {
           self.detailsScrollView.refreshControl?.endRefreshing()
        }
     }
     
-    /*
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > 0 {
-            scrollView.contentOffset.y = 0
-        }
-    }
-     */
-    
     func setLabels() {
         titleLabel.text = cardsData[0].title
         descriptionLabel.text = cardsData[0].description
-        
         extendedDescriptionLabel.text = cardsData[0].detailedDescription
-        
-        /*
-                extendedDescriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        extendedDescriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-         */
         extendedDescriptionLabel.lineBreakMode = .byWordWrapping
     }
     
@@ -80,8 +60,4 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
         detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height)
         detailsScrollView.layer.backgroundColor = backgroundColor.cgColor
     }
-    
-    
-    
-
 }

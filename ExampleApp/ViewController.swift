@@ -10,23 +10,25 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
-        
         cardsTable.dataSource = self
         cardsTable.delegate = self
-        setupStyle()
         configureRefreshControl()
-        loadCardInfo()
+        fetchData { success, data in
+            do{
+                let decoder = JSONDecoder()
+                let actualCard = try decoder.decode(Card.self, from: data!)
+                cardsData.append(Card(id: 0, title: actualCard.title, description: actualCard.description, detailedDescription: actualCard.detailedDescription))
+                cardsData.append(Card(id: 1, title: actualCard.title, description: actualCard.description, detailedDescription: actualCard.detailedDescription))
+                cardsData.append(Card(id: 2, title: actualCard.title, description: actualCard.description, detailedDescription: actualCard.detailedDescription))
+            } catch let error {
+                print(error)
+            }
+                
+        }
         cardsTable.reloadData()
-
     }
     
     @IBOutlet weak var cardsTable: UITableView!
@@ -38,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
         label.textAlignment = .left
         label.text = "Special Offers"
+        
         return label
     }
     
@@ -46,7 +49,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let offerDetailsVC = storyBoard.instantiateViewController(identifier: "OfferDetails")
                 self.navigationController?.pushViewController(offerDetailsVC, animated: true)
-
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,11 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-
         let currentCard = cardsData[indexPath.row]
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-        
         customCell.titleLabel.text = currentCard.title
         customCell.descriptionLabel.text = currentCard.description
         
@@ -78,8 +77,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     @objc func handleRefreshControl() {
         cardsTable.reloadData()
-        
-       // Dismiss the refresh control.
        DispatchQueue.main.async {
           self.cardsTable.refreshControl?.endRefreshing()
        }
