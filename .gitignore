@@ -132,3 +132,10 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swift
+
+# Warning from SwiftLint's Github page
+# Note that this will add the SwiftLint binaries, its dependencies' binaries,
+# and the Swift binary library distribution to the Pods/ directory,
+# so checking in this directory to SCM such as Git is discouraged.
+
+Pods/

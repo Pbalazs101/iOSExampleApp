@@ -7,6 +7,7 @@ target 'ExampleApp' do
 
   # Pods for ExampleApp
   pod 'Alamofire'
+  pod 'SwiftLint'
 
   target 'ExampleAppTests' do
     inherit! :search_paths
