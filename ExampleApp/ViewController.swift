@@ -16,8 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cardsTable.dataSource = self
         cardsTable.delegate = self
         configureRefreshControl()
-        fetchData { success, data in
-            do{
+        fetchData { _, data in
+            do {
                 let decoder = JSONDecoder()
                 let actualCard = try decoder.decode(Card.self, from: data!)
                 cardsData.append(Card(id: 0, title: actualCard.title, description: actualCard.description, detailedDescription: actualCard.detailedDescription))
@@ -26,11 +26,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } catch let error {
                 print(error)
             }
-                
         }
         cardsTable.reloadData()
     }
-    
     @IBOutlet weak var cardsTable: UITableView!
 
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -40,47 +38,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
         label.textAlignment = .left
         label.text = "Special Offers"
-        
         return label
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let offerDetailsVC = storyBoard.instantiateViewController(identifier: "OfferDetails")
                 self.navigationController?.pushViewController(offerDetailsVC, animated: true)
         }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cardsData.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentCard = cardsData[indexPath.row]
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         customCell.titleLabel.text = currentCard.title
         customCell.descriptionLabel.text = currentCard.description
-        
         return customCell
     }
 
     func setupStyle() {
         view.layoutIfNeeded()
     }
-    
     func configureRefreshControl () {
         cardsTable.refreshControl = UIRefreshControl()
         cardsTable.refreshControl?.addTarget(self, action:
                                           #selector(handleRefreshControl),
                                           for: .valueChanged)
     }
-        
     @objc func handleRefreshControl() {
         cardsTable.reloadData()
        DispatchQueue.main.async {
           self.cardsTable.refreshControl?.endRefreshing()
        }
     }
-    
 }
-
