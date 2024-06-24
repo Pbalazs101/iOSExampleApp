@@ -202,6 +202,7 @@
 				D19A11D52C04AA66000B1520 /* Frameworks */,
 				D19A11D62C04AA66000B1520 /* Resources */,
 				2D22AE30E5FFC1DBF0F2A522 /* [CP] Embed Pods Frameworks */,
+				D13F0EBB2C29AD4D0026F0D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -378,6 +379,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D13F0EBB2C29AD4D0026F0D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		D2B1F92D68DB0DD400A00EAE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
