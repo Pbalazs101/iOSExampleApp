@@ -13,8 +13,7 @@ var cardsData: [Card] = []
 /// Send an API request to obtain card info from JSON
 func loadCardInfo() {
     let url = "http://localhost:8000/CardData.json"
-    AF.request(url).response {
-        response in
+    AF.request(url).response { response in
         guard let data = response.data else { return }
         do {
             let decoder = JSONDecoder()
@@ -30,7 +29,7 @@ func loadCardInfo() {
 
 func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
    let url = URL(string: "http://localhost:8000/CardData.json")!
-   let task = URLSession.shared.dataTask(with: url) { data, response, error in
+   let task = URLSession.shared.dataTask(with: url) { data, _, _ in
       if let data = data {
          completion(true, data)
       } else {
