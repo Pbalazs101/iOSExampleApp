@@ -9,16 +9,12 @@ import UIKit
 
 class OfferDetailsViewController: UIViewController, UITableViewDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var backToRootButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var detailsScrollView: UIScrollView!
     @IBOutlet weak var extendedDescriptionLabel: UILabel!
-    @IBAction func backButton(_ sender: UIButton) {
-        _ = navigationController?.popViewController(animated: true)
-    }
-    @IBAction func exitButton(_ sender: UIButton) {
-        _ = navigationController?.popToRootViewController(animated: true)
-    }
     let backgroundColor: UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +23,14 @@ class OfferDetailsViewController: UIViewController, UITableViewDelegate, UIScrol
         configureRefreshControl()
         detailsScrollView.layoutIfNeeded()
         setLabels()
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        backToRootButton.addTarget(self, action: #selector(backToRootButtonTapped), for: .touchUpInside)
+    }
+    @objc private func backButtonTapped() {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    @objc private func backToRootButtonTapped() {
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     func configureRefreshControl () {
         detailsScrollView.refreshControl = UIRefreshControl()
