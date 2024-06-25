@@ -7,24 +7,19 @@
 
 import UIKit
 
-class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
+class OfferDetailsViewController: UIViewController, UITableViewDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var detailsScrollView: UIScrollView!
     @IBOutlet weak var extendedDescriptionLabel: UILabel!
-    
     @IBAction func backButton(_ sender: UIButton) {
         _ = navigationController?.popViewController(animated: true)
     }
-    
     @IBAction func exitButton(_ sender: UIButton) {
         _ = navigationController?.popToRootViewController(animated: true)
     }
-    
-    let backgroundColor:UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
-    
-    
+    let backgroundColor: UIColor = UIColor(red: 245/255, green: 245.0/255, blue: 245/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -33,28 +28,24 @@ class OfferDetailsViewController: UIViewController,UITableViewDelegate, UIScroll
         detailsScrollView.layoutIfNeeded()
         setLabels()
     }
-    
     func configureRefreshControl () {
         detailsScrollView.refreshControl = UIRefreshControl()
         detailsScrollView.refreshControl?.addTarget(self, action:
                                           #selector(handleRefreshControl),
                                           for: .valueChanged)
     }
-        
     @objc func handleRefreshControl() {
         setLabels()
        DispatchQueue.main.async {
           self.detailsScrollView.refreshControl?.endRefreshing()
        }
     }
-    
     func setLabels() {
         titleLabel.text = cardsData[0].title
         descriptionLabel.text = cardsData[0].description
         extendedDescriptionLabel.text = cardsData[0].detailedDescription
         extendedDescriptionLabel.lineBreakMode = .byWordWrapping
     }
-    
     func setupStyle() {
         detailsScrollView.isScrollEnabled = true
         detailsScrollView.contentSize = CGSize(width: detailsScrollView.bounds.width, height: detailsScrollView.bounds.height)
