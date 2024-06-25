@@ -114,6 +114,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D1703A2E2C2AF2B2008EA161 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D1703A2F2C2AF2C4008EA161 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D17407DB2C05F3FA0063F2A7 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1703A302C2AF2D6008EA161 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D19A11DF2C04AA66000B1520 /* ViewController.swift */,
+				D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D1703A322C2AF2F6008EA161 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1703A332C2AF349008EA161 /* TableViewCell */,
+				D19A11E12C04AA66000B1520 /* Main.storyboard */,
+				D19A11E62C04AA69000B1520 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1703A332C2AF349008EA161 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */,
+				D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		D18C44DB2C05DECD00EE7E63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,19 +190,15 @@
 		D19A11DA2C04AA66000B1520 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1703A322C2AF2F6008EA161 /* View */,
+				D1703A302C2AF2D6008EA161 /* ViewControllers */,
+				D1703A2F2C2AF2C4008EA161 /* Models */,
+				D1703A2E2C2AF2B2008EA161 /* Network */,
 				D18C44DB2C05DECD00EE7E63 /* Resources */,
-				D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */,
-				D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */,
 				D19A11DB2C04AA66000B1520 /* AppDelegate.swift */,
 				D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */,
-				D19A11DF2C04AA66000B1520 /* ViewController.swift */,
-				D19A11E12C04AA66000B1520 /* Main.storyboard */,
 				D19A11E42C04AA69000B1520 /* Assets.xcassets */,
-				D19A11E62C04AA69000B1520 /* LaunchScreen.storyboard */,
 				D19A11E92C04AA69000B1520 /* Info.plist */,
-				D17407DB2C05F3FA0063F2A7 /* Card.swift */,
-				D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */,
-				D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";

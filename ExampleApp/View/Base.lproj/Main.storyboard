@@ -250,6 +250,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arrowButton" destination="4Ur-7e-NnJ" id="FN2-UY-jX4"/>
                         <outlet property="descriptionLabel" destination="zDy-p4-w2H" id="qci-eU-Hav"/>
                         <outlet property="detailsScrollView" destination="yoG-NU-efF" id="WU2-Sk-v31"/>
                         <outlet property="extendedDescriptionLabel" destination="eCI-kr-6sm" id="10u-rv-Pnf"/>
