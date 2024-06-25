@@ -53,8 +53,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // swiftlint:disable force_cast
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         // swiftlint:enable force_cast
-        customCell.titleLabel.text = currentCard.title
-        customCell.descriptionLabel.text = currentCard.description
         return customCell
     }
 
