@@ -50,7 +50,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentCard = cardsData[indexPath.row]
+        // swiftlint:disable force_cast
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        // swiftlint:disable force_cast
         customCell.titleLabel.text = currentCard.title
         customCell.descriptionLabel.text = currentCard.description
         return customCell
