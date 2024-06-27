@@ -49,7 +49,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cardsData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentCard = cardsData[indexPath.row]
         // swiftlint:disable force_cast
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         // swiftlint:enable force_cast
