@@ -24,7 +24,7 @@ func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
 }
 
 public func setupData(card: Card, numberOfCards: Int) {
-    for _ in 0..<numberOfCards {
-        cardsData.append(Card(id: card.id, title: card.title, description: card.description, detailedDescription: card.detailedDescription))
+    for currentID in 0..<numberOfCards {
+        cardsData.append(Card(id: currentID, title: card.title, description: card.description, detailedDescription: card.detailedDescription))
     }
 }
