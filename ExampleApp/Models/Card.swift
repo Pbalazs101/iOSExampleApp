@@ -7,8 +7,15 @@
 
 import Foundation
 
+protocol CardHandler {
+    var id: Int {get}
+    var title: String {get}
+    var description: String {get}
+    var detailedDescription: String {get}
+}
+
 /// Representing a single card displayed on the Offers page
-public struct Card: Codable {
+public struct Card: CardHandler, Codable {
     var id: Int
     var title: String
     var description: String
