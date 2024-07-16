@@ -8,6 +8,8 @@ target 'ExampleApp' do
   # Pods for ExampleApp
   pod 'Alamofire'
   pod 'SwiftLint'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
 
   target 'ExampleAppTests' do
     inherit! :search_paths
