@@ -16,6 +16,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cardsTable.dataSource = self
         cardsTable.delegate = self
         configureRefreshControl()
+        loadCardData()
+        cardsTable.reloadData()
+    }
+    @IBOutlet weak var cardsTable: UITableView!
+
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
+
+    func loadCardData() {
         fetchData { _, data in
             do {
                 let decoder = JSONDecoder()
@@ -25,12 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print(error)
             }
         }
-        cardsTable.reloadData()
     }
-    @IBOutlet weak var cardsTable: UITableView!
-
-    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
