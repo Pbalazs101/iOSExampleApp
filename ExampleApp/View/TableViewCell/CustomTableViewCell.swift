@@ -14,10 +14,12 @@ class CustomTableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "CustomTableViewCell", bundle: nil)
     }
+
     public func setupLabels(card: Card) {
         titleLabel.text = card.title
         descriptionLabel.text = card.description
     }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupLabels(card: cardsData[0])

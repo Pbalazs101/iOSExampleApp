@@ -42,14 +42,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.text = "Special Offers"
         return label
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let offerDetailsVC = storyBoard.instantiateViewController(identifier: "OfferDetails")
                 self.navigationController?.pushViewController(offerDetailsVC, animated: true)
         }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cardsData.count
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable force_cast
         let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
@@ -60,12 +63,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func setupStyle() {
         view.layoutIfNeeded()
     }
+
     func configureRefreshControl () {
         cardsTable.refreshControl = UIRefreshControl()
         cardsTable.refreshControl?.addTarget(self, action:
                                           #selector(handleRefreshControl),
                                           for: .valueChanged)
     }
+
     @objc func handleRefreshControl() {
         cardsTable.reloadData()
        DispatchQueue.main.async {
