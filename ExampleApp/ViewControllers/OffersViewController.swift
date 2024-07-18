@@ -10,6 +10,8 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
+    var networkService: NetworkService!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
@@ -25,7 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
 
     func loadCardData() {
-        NetworkServiceCall().fetchData { _, data in
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            networkService = appDelegate.container.resolve(NetworkService.self)
+        }
+
+        networkService.fetchData { _, data in
             do {
                 let decoder = JSONDecoder()
                 let actualCard = try decoder.decode(Card.self, from: data!)
