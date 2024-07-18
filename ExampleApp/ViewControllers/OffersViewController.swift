@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
 
     func loadCardData() {
-        fetchData { _, data in
+        NetworkServiceCall().fetchData { _, data in
             do {
                 let decoder = JSONDecoder()
                 let actualCard = try decoder.decode(Card.self, from: data!)

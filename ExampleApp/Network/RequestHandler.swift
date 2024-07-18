@@ -7,20 +7,28 @@
 
 import Foundation
 import Alamofire
+import Swinject
+import SwinjectStoryboard
 
 var cardsData: [Card] = []
 
-/// Send an API request to obtain card info from JSON
-func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
-   let url = URL(string: "http://localhost:8000/CardData.json")!
-   let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-      if let data = data {
-         completion(true, data)
-      } else {
-         completion(false, nil)
-      }
-   }
-   task.resume()
+protocol NetworkService {
+    func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
+}
+
+public class NetworkServiceCall: NetworkService {
+    /// Send an API request to obtain card info from JSON
+    func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
+        let url = URL(string: "http://localhost:8000/CardData.json")!
+        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+            if let data = data {
+                completion(true, data)
+            } else {
+                completion(false, nil)
+            }
+        }
+        task.resume()
+    }
 }
 
 public func setupData(card: Card, numberOfCards: Int) {
