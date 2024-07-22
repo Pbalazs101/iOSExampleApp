@@ -10,7 +10,7 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
-    var networkService: NetworkService!
+    var networkService: NetworkingManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Factory?
     func loadCardData() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            networkService = appDelegate.container.resolve(NetworkService.self)
+            networkService = appDelegate.container.resolve(NetworkingManager.self)
         }
 
         networkService.fetchData { _, data in

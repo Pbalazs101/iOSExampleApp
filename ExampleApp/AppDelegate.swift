@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Container
     private func setupContainer() {
-        container.register(NetworkService.self) { _ in
-            NetworkServiceCall()
+        container.register(NetworkingManager.self) { _ in
+            NetworkService()
         }
     }
 }

@@ -13,12 +13,12 @@ import SwinjectStoryboard
 var cardsData: [Card] = []
 
 // Service
-protocol NetworkService {
+protocol NetworkingManager {
     func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
 }
 
 // Component
-public class NetworkServiceCall: NetworkService {
+public class NetworkService: NetworkingManager {
     /// Send an API request to obtain card info from JSON
     func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
         let url = URL(string: "http://localhost:8000/CardData.json")!
