@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 93))
 
+    // Factory?
     func loadCardData() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             networkService = appDelegate.container.resolve(NetworkService.self)
