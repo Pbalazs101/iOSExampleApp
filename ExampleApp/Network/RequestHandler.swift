@@ -14,14 +14,14 @@ var cardsData: [Card] = []
 
 // Service
 protocol NetworkingManager {
-    func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
+    func fetchData(_ url: String, completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
 }
 
 // Component
 public class NetworkService: NetworkingManager {
     /// Send an API request to obtain card info from JSON
-    func fetchData(_ completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
-        let url = URL(string: "http://localhost:8000/CardData.json")!
+    func fetchData(_ url: String, completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
+        let url = URL(string: url)!
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             if let data = data {
                 completion(true, data)

@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             networkService = appDelegate.container.resolve(NetworkingManager.self)
         }
 
-        networkService.fetchData { _, data in
+        networkService.fetchData("http://localhost:8000/CardData.json") { _, data in
             do {
                 let decoder = JSONDecoder()
                 let actualCard = try decoder.decode(Card.self, from: data!)
