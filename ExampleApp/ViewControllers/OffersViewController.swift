@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
+class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
     var networkService: NetworkingManager!
 
