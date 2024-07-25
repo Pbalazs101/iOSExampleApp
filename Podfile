@@ -9,6 +9,7 @@ target 'ExampleApp' do
   pod 'Alamofire'
   pod 'SwiftLint'
   pod 'Swinject'
+  pod 'SwinjectAutoregistration'
   pod 'SwinjectStoryboard'
   pod 'RxSwift', '6.7.1'
   pod 'RxCocoa', '6.7.1'
