@@ -12,6 +12,7 @@
 		C0AFE868F9730FB72AA51E36 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292C233A92E30C0DB86D1091 /* Pods_ExampleAppTests.framework */; };
 		D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */; };
 		D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17407DB2C05F3FA0063F2A7 /* Card.swift */; };
+		D183242A2C524EC700E9DDDD /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18324292C524EC700E9DDDD /* NetworkAssembly.swift */; };
 		D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DB2C04AA66000B1520 /* AppDelegate.swift */; };
 		D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */; };
 		D19A11E02C04AA66000B1520 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DF2C04AA66000B1520 /* OffersViewController.swift */; };
@@ -53,6 +54,7 @@
 		C75FD045C2DDF3340AF4719E /* Pods-ExampleApp-ExampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		D17407DB2C05F3FA0063F2A7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D18324292C524EC700E9DDDD /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		D19A11D82C04AA66000B1520 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A11DB2C04AA66000B1520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		D18324282C524E9B00E9DDDD /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D18324292C524EC700E9DDDD /* NetworkAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		D18C44DB2C05DECD00EE7E63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		D19A11DA2C04AA66000B1520 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D18324282C524E9B00E9DDDD /* Assembly */,
 				D1703A322C2AF2F6008EA161 /* View */,
 				D1703A302C2AF2D6008EA161 /* ViewControllers */,
 				D1703A2F2C2AF2C4008EA161 /* Models */,
@@ -490,6 +501,7 @@
 			files = (
 				D1DBDA722C11A90B00B6ACC6 /* RequestHandler.swift in Sources */,
 				D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */,
+				D183242A2C524EC700E9DDDD /* NetworkAssembly.swift in Sources */,
 				D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* OffersViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,

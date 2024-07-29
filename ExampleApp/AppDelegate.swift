@@ -38,5 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         container.register(NetworkingManager.self) { _ in
             NetworkService()
         }
+        container.register(OffersViewController.self) { resolver in
+            let viewController = OffersViewController()
+            viewController.networkService = resolver.resolve(NetworkService.self)
+            return viewController
+        }
     }
 }
