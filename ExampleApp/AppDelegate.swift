@@ -7,15 +7,24 @@
 
 import UIKit
 import Swinject
+import SwinjectAutoregistration
+import SwinjectStoryboard
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    fileprivate let assemblies: [Assembly] = [NetworkAssembly()]
+
+    var window: UIWindow?
     let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        setupContainer()
+        let assembler = Assembler.init(container: container)
+        assembler.apply(assemblies: assemblies)
+
+        SwinjectStoryboard.defaultContainer = container
+
         return true
     }
 
@@ -33,15 +42,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    // Container
+    // Unused function
+    /*
     private func setupContainer() {
-        container.register(NetworkingManager.self) { _ in
-            NetworkService()
+
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: container)
+        guard let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController,
+              let initialViewController = navigationController.viewControllers.first as? OffersViewController else {
+            fatalError("Storyboard error")
         }
-        container.register(OffersViewController.self) { resolver in
-            let viewController = OffersViewController()
-            viewController.networkService = resolver.resolve(NetworkService.self)
-            return viewController
-        }
+        let resolvedService = container.resolve(NetworkingManager.self)
+        print("Resolved service: \(String(describing: resolvedService))")
+        initialViewController.networkService = resolvedService
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
     }
+     */
 }

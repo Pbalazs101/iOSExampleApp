@@ -9,8 +9,11 @@ import Foundation
 import Swinject
 import SwinjectAutoregistration
 
-class NetworkAssembly{
-    func assemble(container: Container){
-        
+class NetworkAssembly: Assembly {
+    func assemble(container: Container) {
+        container.autoregister(NetworkingManager.self, initializer: NetworkService.init).inObjectScope(.container)
+        container.storyboardInitCompleted(OffersViewController.self, initCompleted: { r, c in
+            c.networkService = r.resolve(NetworkingManager.self)
+        })
     }
 }

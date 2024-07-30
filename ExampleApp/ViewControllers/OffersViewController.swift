@@ -10,16 +10,24 @@ import Alamofire
 
 class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
-    var networkService: NetworkingManager!
-
+    var networkService: NetworkingManager?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if networkService == nil {
+            print("nil in viewDidLoad")
+        } else {
+            print("set in viewDidLoad")
+        }
+
         cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
         cardsTable.dataSource = self
         cardsTable.delegate = self
         configureRefreshControl()
-        loadCardData()
-        cardsTable.reloadData()
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.loadCardData()
+        }
+        // loadCardData()
+        // cardsTable.reloadData()
     }
     @IBOutlet weak var cardsTable: UITableView!
 
@@ -28,15 +36,18 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
 
     // Factory?
     func loadCardData() {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            networkService = appDelegate.container.resolve(NetworkingManager.self)
-        }
-
-        networkService.fetchData("http://localhost:8000/CardData.json") { _, data in
+        networkService?.fetchData("http://localhost:8000/CardData.json") { success, data in
+            guard success, let data = data else {
+                print("Failed to fetch data")
+                return
+            }
             do {
                 let decoder = JSONDecoder()
-                let actualCard = try decoder.decode(Card.self, from: data!)
+                let actualCard = try decoder.decode(Card.self, from: data)
                 setupData(card: actualCard, numberOfCards: 3)
+                DispatchQueue.main.async {
+                    self.cardsTable.reloadData()
+                }
             } catch let error {
                 print(error)
             }
@@ -79,6 +90,17 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     @objc func handleRefreshControl() {
+        guard let networkService = networkService else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.loadCardData()
+            DispatchQueue.main.async {
+                self.cardsTable.refreshControl?.endRefreshing()
+                self.cardsTable.reloadData()
+            }
+        }
+
         cardsTable.reloadData()
        DispatchQueue.main.async {
           self.cardsTable.refreshControl?.endRefreshing()
