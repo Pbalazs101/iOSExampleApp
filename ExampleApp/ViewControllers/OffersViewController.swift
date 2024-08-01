@@ -17,7 +17,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
         cardsTable.dataSource = self
         cardsTable.delegate = self
         configureRefreshControl()
-        
+
         DispatchQueue.global(qos: .userInitiated).async {
             self.loadCardData()
         }

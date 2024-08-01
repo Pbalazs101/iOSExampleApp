@@ -10,8 +10,6 @@ import Alamofire
 import Swinject
 import SwinjectStoryboard
 
-var cardsData: [Card] = []
-
 // Service
 protocol NetworkingManager {
     func fetchData(_ url: String, completion: @escaping (_ success: Bool, _ data: Data?) -> Void)
@@ -30,11 +28,5 @@ public class NetworkService: NetworkingManager {
             }
         }
         task.resume()
-    }
-}
-
-public func setupData(card: Card, numberOfCards: Int) {
-    for currentID in 0..<numberOfCards {
-        cardsData.append(Card(id: currentID, title: card.title, description: card.description, detailedDescription: card.detailedDescription))
     }
 }

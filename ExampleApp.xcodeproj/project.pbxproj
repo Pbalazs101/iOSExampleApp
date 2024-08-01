@@ -25,6 +25,7 @@
 		D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */; };
 		D1C84CBA2C1AEA3400CB275D /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */; };
 		D1DBDA722C11A90B00B6ACC6 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */; };
+		D1DED9922C5B853300250DFD /* CardsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DED9912C5B853300250DFD /* CardsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D1C84CB72C1AEA3400CB275D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D1C84CB82C1AEA3400CB275D /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		D1DED9912C5B853300250DFD /* CardsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsData.swift; sourceTree = "<group>"; };
 		DB2392C798937B312D145AE1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4C882BB576ABD9C05B34757 /* Pods-ExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 				D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */,
 				D19A11E42C04AA69000B1520 /* Assets.xcassets */,
 				D19A11E92C04AA69000B1520 /* Info.plist */,
+				D1DED9912C5B853300250DFD /* CardsData.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */,
 				D183242A2C524EC700E9DDDD /* NetworkAssembly.swift in Sources */,
 				D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */,
+				D1DED9922C5B853300250DFD /* CardsData.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* OffersViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
 				D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */,
