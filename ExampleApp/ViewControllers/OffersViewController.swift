@@ -66,9 +66,9 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable force_cast
-        let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-        // swiftlint:enable force_cast
+        guard let customCell = cardsTable.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? CustomTableViewCell else {
+            fatalError("Cannot load custom cell")
+        }
         return customCell
     }
 
