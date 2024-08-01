@@ -13,21 +13,15 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     var networkService: NetworkingManager?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if networkService == nil {
-            print("nil in viewDidLoad")
-        } else {
-            print("set in viewDidLoad")
-        }
-
         cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
         cardsTable.dataSource = self
         cardsTable.delegate = self
         configureRefreshControl()
+        
         DispatchQueue.global(qos: .userInitiated).async {
             self.loadCardData()
         }
-        // loadCardData()
-        // cardsTable.reloadData()
+
     }
     @IBOutlet weak var cardsTable: UITableView!
 
