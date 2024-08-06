@@ -9,10 +9,8 @@ import Foundation
 
 var cardsData: [Card] = []
 
-public func setupData(card: Card, numberOfCards: Int, isInitialSetup: Bool) {
-    if isInitialSetup == false {
-        cardsData.removeAll()
-    }
+public func setupData(card: Card, numberOfCards: Int) {
+    cardsData.removeAll()
     for currentID in 0..<numberOfCards {
         cardsData.append(Card(id: currentID, title: card.title, description: card.description, detailedDescription: card.detailedDescription))
     }

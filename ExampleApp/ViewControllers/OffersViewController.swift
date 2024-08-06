@@ -10,7 +10,6 @@ import Alamofire
 
 class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
-    private var isInitialSetup: Bool = true
     var networkService: NetworkingManager?
 
     override func viewDidLoad() {
@@ -40,8 +39,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
             do {
                 let decoder = JSONDecoder()
                 let actualCard = try decoder.decode(Card.self, from: data)
-                setupData(card: actualCard, numberOfCards: 3, isInitialSetup: self.isInitialSetup)
-                self.isInitialSetup = false
+                setupData(card: actualCard, numberOfCards: 3)
                 DispatchQueue.main.async {
                     self.cardsTable.reloadData()
                 }
