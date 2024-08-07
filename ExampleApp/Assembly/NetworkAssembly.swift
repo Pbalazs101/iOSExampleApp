@@ -11,7 +11,7 @@ import SwinjectAutoregistration
 
 class NetworkAssembly: Assembly {
     func assemble(container: Container) {
-        container.autoregister(NetworkingManager.self, initializer: NetworkService.init).inObjectScope(.container)
+        container.autoregister(NetworkingManager.self, initializer: NetworkManager.init).inObjectScope(.container)
         container.storyboardInitCompleted(OffersViewController.self, initCompleted: { r, c in
             c.networkService = r.resolve(NetworkingManager.self)
         })

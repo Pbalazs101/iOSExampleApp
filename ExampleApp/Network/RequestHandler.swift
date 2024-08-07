@@ -16,7 +16,7 @@ protocol NetworkingManager {
 }
 
 // Component
-public class NetworkService: NetworkingManager {
+public class NetworkManager: NetworkingManager {
     /// Send an API request to obtain card info from JSON
     func fetchData(_ url: String, completion: @escaping (_ success: Bool, _ data: Data?) -> Void) {
         let url = URL(string: url)!
