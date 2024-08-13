@@ -135,7 +135,7 @@
 		4D0527EBCE353D75F5A8B67BFB9344D2 /* RefCountDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C9D112B74D7E95D6BB21CAC68AB80 /* RefCountDisposable.swift */; };
 		4D228B2CC06F7F9A15C5E077952A2D8E /* Zip+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E28E9292BCC9762BDADA9A022B8760 /* Zip+Collection.swift */; };
 		4EA89ACA73CC27029AB36279542D3D95 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B1E79B3DD5178FC8C675688FE19C7 /* ObserverType.swift */; };
-		4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */ = {isa = PBXBuildFile; fileRef = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */; };
+		4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */; };
 		4FABBE9B8E49D12CAEE918CBF6B6424C /* InstanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FBE5A6A4A6906024B0D3111A16546E /* InstanceStorage.swift */; };
 		5075DC82A63A9807DFC390B4CE8046CD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE74FC587359B898772DCC9100798F0 /* Session.swift */; };
 		50D8FDFACCCC86734BAD3497379AD047 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BEDD727D5D38E12B388822C3D4141 /* Assembly.swift */; };
@@ -603,7 +603,7 @@
 		07C50C2B2CF1EAA1B79E1B4A65B78158 /* NSObject+Rx+RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx+RawRepresentable.swift"; path = "RxCocoa/Foundation/NSObject+Rx+RawRepresentable.swift"; sourceTree = "<group>"; };
 		081FE0CB8DB926E5EB54A44671EE1B90 /* InvocableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableType.swift; path = RxSwift/Schedulers/Internal/InvocableType.swift; sourceTree = "<group>"; };
 		08335BF4D9048460F21F959D762854E6 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = RxRelay/Utils.swift; sourceTree = "<group>"; };
-		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Alamofire-Alamofire"; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A24DDDB60D1937849E23486522BB926 /* GroupedObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupedObservable.swift; path = RxSwift/GroupedObservable.swift; sourceTree = "<group>"; };
 		0A6B207CCA9C5F9614CB359875E2CF62 /* UIBarButtonItem+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Rx.swift"; path = "RxCocoa/iOS/UIBarButtonItem+Rx.swift"; sourceTree = "<group>"; };
 		0B8BDB1C71BC06794F7628C2C1863E22 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/FunctionType.swift; sourceTree = "<group>"; };
@@ -766,7 +766,7 @@
 		5BCB4A023C2536F5FCDFEB754BEEED1A /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = RxSwift/Observables/Delay.swift; sourceTree = "<group>"; };
 		5C6FDCB850D3447790274CCEE459850E /* SwinjectAutoregistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwinjectAutoregistration.h; path = Sources/SwinjectAutoregistration.h; sourceTree = "<group>"; };
 		5C835FB5B73329A1B2CD9C3E827B0219 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/Core/AFError.swift; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E62C88263B2BBC261865C85B245DB84 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "RxCocoa/iOS/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		6076EFAC6ED513F47C19254692006846 /* DelegateProxyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyType.swift; path = RxCocoa/Common/DelegateProxyType.swift; sourceTree = "<group>"; };
 		60C5950C62762C62EA726B5AD980A5D2 /* Debounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debounce.swift; path = RxSwift/Observables/Debounce.swift; sourceTree = "<group>"; };
@@ -1197,8 +1197,8 @@
 		25B6589868AFE5BF7503D2B8A81235E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */,
 				0CE82B428D4A5BFF5A9CC4393918BB53 /* Pods-ExampleApp */,
 				3435D153C7B30A49915BD66A72E1B573 /* Pods-ExampleApp-ExampleAppUITests */,
 				B1DFEF400FB0F332457ACFF59C9C4319 /* Pods-ExampleAppTests */,
@@ -2063,7 +2063,7 @@
 			);
 			name = "Alamofire-Alamofire";
 			productName = Alamofire;
-			productReference = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */;
+			productReference = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		BDC2477AF0F463CB482A12E75891C9C1 /* Pods-ExampleApp */ = {
@@ -2126,7 +2126,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2207,7 +2207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */,
+				4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2955,7 +2955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2974,7 +2974,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3063,7 +3063,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3368,7 +3368,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3475,7 +3475,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3667,7 +3667,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

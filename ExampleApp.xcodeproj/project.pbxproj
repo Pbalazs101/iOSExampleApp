@@ -13,6 +13,7 @@
 		D161D5DA2C0E0F4F00214B04 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */; };
 		D17407DC2C05F3FA0063F2A7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17407DB2C05F3FA0063F2A7 /* Card.swift */; };
 		D183242A2C524EC700E9DDDD /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18324292C524EC700E9DDDD /* NetworkAssembly.swift */; };
+		D18DB0932C6B758D00BD5C90 /* OffersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18DB0922C6B758D00BD5C90 /* OffersAPI.swift */; };
 		D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DB2C04AA66000B1520 /* AppDelegate.swift */; };
 		D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */; };
 		D19A11E02C04AA66000B1520 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A11DF2C04AA66000B1520 /* OffersViewController.swift */; };
@@ -56,6 +57,7 @@
 		D161D5D92C0E0F4F00214B04 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		D17407DB2C05F3FA0063F2A7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D18324292C524EC700E9DDDD /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
+		D18DB0922C6B758D00BD5C90 /* OffersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersAPI.swift; sourceTree = "<group>"; };
 		D19A11D82C04AA66000B1520 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A11DB2C04AA66000B1520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19A11DD2C04AA66000B1520 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D1DBDA712C11A90B00B6ACC6 /* RequestHandler.swift */,
+				D18DB0922C6B758D00BD5C90 /* OffersAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				D183242A2C524EC700E9DDDD /* NetworkAssembly.swift in Sources */,
 				D1C84CB92C1AEA3400CB275D /* CustomTableViewCell.swift in Sources */,
 				D1DED9922C5B853300250DFD /* CardsData.swift in Sources */,
+				D18DB0932C6B758D00BD5C90 /* OffersAPI.swift in Sources */,
 				D19A11E02C04AA66000B1520 /* OffersViewController.swift in Sources */,
 				D19A11DC2C04AA66000B1520 /* AppDelegate.swift in Sources */,
 				D19A11DE2C04AA66000B1520 /* SceneDelegate.swift in Sources */,
