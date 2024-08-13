@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (5.9.1)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - RxCocoa (6.7.1):
     - RxRelay (= 6.7.1)
     - RxSwift (= 6.7.1)
@@ -15,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Moya
   - RxCocoa (= 6.7.1)
   - RxSwift (= 6.7.1)
   - SwiftLint
@@ -25,6 +30,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Moya
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -35,6 +41,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: f5609cb4637587a7faa99c5d5787e3ad582b75a4
   RxRelay: 4151ba01152436b08271e08410135e099880eae5
   RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
@@ -43,6 +50,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
   SwinjectStoryboard: 240ce371396da09a4c43c72ee5c148108500e184
 
-PODFILE CHECKSUM: 2ba33067cfbc73b1b0d8d30e44e82539001d0df3
+PODFILE CHECKSUM: ebbc88f6019e96a484ec2d88c936b96d5c23875e
 
 COCOAPODS: 1.15.2

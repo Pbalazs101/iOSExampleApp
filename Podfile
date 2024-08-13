@@ -13,6 +13,7 @@ target 'ExampleApp' do
   pod 'SwinjectStoryboard'
   pod 'RxSwift', '6.7.1'
   pod 'RxCocoa', '6.7.1'
+  pod 'Moya'
 
   target 'ExampleAppTests' do
     inherit! :search_paths
