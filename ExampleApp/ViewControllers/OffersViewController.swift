@@ -7,11 +7,14 @@
 
 import UIKit
 import Alamofire
+import Moya
 
 class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
 
     var networkService: NetworkingManager?
 
+    private let networkManager: NetworkManager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cardsTable.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
@@ -31,19 +34,15 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
 
     // Factory?
     func loadCardData() {
-        networkService?.fetchData("http://localhost:8000/CardData.json") { success, data in
-            guard success, let data = data else {
-                print("Failed to fetch data")
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                let actualCard = try decoder.decode(Card.self, from: data)
-                setupData(card: actualCard, numberOfCards: 3)
-                DispatchQueue.main.async {
-                    self.cardsTable.reloadData()
-                }
-            } catch let error {
+        // startLoading()
+        networkService?.fetchData { [weak self] result in
+            guard let weakSelf = self else { return }
+            // weakSelf.stopLoading()
+            switch result {
+            case .success(let cardResponse):
+                cardsData = cardResponse
+                weakSelf.cardsTable.reloadData()
+            case .failure(let error):
                 print(error)
             }
         }
